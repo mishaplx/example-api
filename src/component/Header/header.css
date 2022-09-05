@@ -1,18 +1,24 @@
 .header > nav {
-  background-color: antiquewhite;
-  margin: 0px 0px 50px;
+  align-items: center;
   display: flex;
-  
-  
-  justify-content: space-between;
+
+  justify-content: space-around;
 
   cursor: pointer;
-
+  height: inherit;
 }
-.header > nav >div:hover {
+.header > nav > div:hover {
   border: 1px solid black;
-
 }
-.header{
+.header {
   flex: 0 0 auto;
+  height: 100px;
+
+  background: rgb(25, 114, 230);
+}
+
+.header > nav > div {
+  height: inherit;
+  display: flex;
+  align-items: center;
 }

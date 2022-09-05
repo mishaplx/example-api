@@ -1,26 +1,16 @@
+import { useState } from "react";
 import "./header.css";
-import axios from "axios";
-import env from "react-dotenv";
-console.log(process.env.NODE_ENV);
-const Header = () => {
-  const breeds = () => {
-    axios.get("https://api.thecatapi.com/v1/breeds", {
-      headers: {
-        "x-api-key": "asd",
-      },
-    }).
-    then(res => console.log(res))
-  };
-  console.log(breeds());
+
+const Header = ({ updateData }) => {
   return (
     <header className="header">
       <nav className="nav">
-        <div>breeds</div>
-        <div>categories</div>
-        <div>votes</div>
-        <div>favourites</div>
-        <div>images</div>
-        <div>Models</div>
+        <div onClick={() => updateData("breeds")}>breeds</div>
+        <div onClick={() => updateData("categories")}>categories</div>
+        <div onClick={() => updateData("votes")}>votes</div>
+        <div onClick={() => updateData("favourites")}>favourites</div>
+        <div onClick={() => updateData("images")}>images</div>
+        <div onClick={() => updateData("Models")}>Models</div>
       </nav>
     </header>
   );
