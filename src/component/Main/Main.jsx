@@ -2,40 +2,44 @@ import "./main.css";
 import axios from "axios";
 import { Card } from "../Card-info/Card-info";
 import { useEffect, useState } from "react";
-
+import { Categories } from "../Categories/Categories";
+import { Loading } from "../Loading/Loading";
 const Main = ({ url }) => {
-  const [data, setAppState] = useState({
-    loading: false,
-    data: [],
-  });
-  useEffect(() => {
-    setAppState({ loading: true });
-    const apiUrl = `https://api.thecatapi.com/v1/${url}`;
-    axios
-      .get(apiUrl, {
-        headers: {
-          "x-api-key":
-            "live_gf0pjveHWvVwLPMSaTmEdWYfljB0o0AS4ikhQGte8hkM4Gk84LuCJ0xoZ8yzjAyB",
-        },
-        params: {
-          page: 1,
-          limit: 10,
-        },
-      })
-      .then(repos => {
-        const allRepos = repos.data;
-        setAppState({ loading: false, data: allRepos });
-      });
-      console.log(data);
-  }, [setAppState]);
+  // const [loading, setLoading] = useState(true);
+  // const [data, setData] = useState([]);
 
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     setLoading(true);
+
+  //     try {
+  //       const { data: response } = await axios.get(
+  //         `https://api.thecatapi.com/v1/${url}`,
+  //         {
+  //           headers: {
+  //             "x-api-key":
+  //               "live_gf0pjveHWvVwLPMSaTmEdWYfljB0o0AS4ikhQGte8hkM4Gk84LuCJ0xoZ8yzjAyB",
+  //           },
+  //           params: {
+  //             page: 1,
+  //             limit: 10,
+  //           },
+  //         }
+  //       );
+  //       setData(response);
+  //     } catch (error) {
+  //       console.error(error.message);
+  //     }
+  //     setLoading(false);
+  //   };
+  //   fetchData();
+  //   console.log("Go useEffect");
+  // }, [url]);
   return (
     <main className="main">
-      <div>{url}</div>
       <div className="container">
-        {/* {data.map(item => (
-          <Card name={item.name} />
-        ))} */}
+
+        
       </div>
       <div className="pagination-container"> </div>
     </main>

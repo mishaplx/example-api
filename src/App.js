@@ -1,21 +1,18 @@
-import Header from "./component/Header/Header";
-import Main from "./component/Main/Main";
-import Footer from "./component/Footer/Footer";
 import "./App.css";
-import axios from "axios";
-import { useState } from "react";
+import { Routes, Route } from "react-router-dom";
+import { Breeds } from "./component/Breeds/breeds";
+import HomePage from "./component/Homepage/HomePage";
+import Layout from "./component/Layout/Layout";
 
 function App() {
-  const [url, setUrl] = useState('breeds')
-  const updateData = async (url) => {
-    setUrl(url)
-  };
-  
   return (
     <div className="App">
-      <Header updateData={updateData} />
-      <Main url={url}/>
-      <Footer />
+      <Routes>
+        <Route  path="/" element={<Layout/>}>
+          <Route  index path="/" element={<HomePage />} />
+          <Route path="/breeds" element={<Breeds />} />
+        </Route>
+      </Routes>
     </div>
   );
 }

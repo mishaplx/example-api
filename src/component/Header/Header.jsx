@@ -1,17 +1,17 @@
-import { useState } from "react";
 import "./header.css";
-
-const Header = ({ updateData }) => {
+import { Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import App from "../../App";
+import { Breeds } from "../Breeds/breeds";
+import HomePage from "../Homepage/HomePage";
+const Header = () => {
   return (
     <header className="header">
       <nav className="nav">
-        <div onClick={() => updateData("breeds")}>breeds</div>
-        <div onClick={() => updateData("categories")}>categories</div>
-        <div onClick={() => updateData("votes")}>votes</div>
-        <div onClick={() => updateData("favourites")}>favourites</div>
-        <div onClick={() => updateData("images")}>images</div>
-        <div onClick={() => updateData("Models")}>Models</div>
+        <Link to="/breeds">breeds</Link>
+        <Link to="/">Go Home</Link>
       </nav>
+      
     </header>
   );
 };

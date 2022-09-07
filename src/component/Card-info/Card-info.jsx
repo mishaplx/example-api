@@ -1,27 +1,15 @@
-import axios from "axios";
-
-export const Card = ({ name }) => {
-  console.log("data card");
-  const data = async (url, limit = 10, page = 1) => {
-    const response = await axios.get(`https://api.thecatapi.com/v1/${url}`, {
-      headers: {
-        "x-api-key":
-          "live_gf0pjveHWvVwLPMSaTmEdWYfljB0o0AS4ikhQGte8hkM4Gk84LuCJ0xoZ8yzjAyB",
-      },
-      params: {
-        page: page,
-        limit: limit,
-      },
-    });
-    console.log(response.data);
-    return await response.data;
-  };
-
-  return (
-    <div className="card-wrapper">
-      <div className="name">{name}</div>
-      <div className="img"></div>
-      <div className="description"></div>
-    </div>
-  );
+import { useState } from "react";
+import "./card-info.css"
+export const Card = ({ data }) => {
+  console.log(data);
+  return data.map(item => (
+    <ul className="card-wrapper" key={item.id}>
+      <li className="id">{item.id}</li>
+      <li className="name">{item.name}</li>
+      <li className="img">
+        <img src={item.image.url} alt={item.id} />
+      </li>
+      <li className="description">{item.description}</li>
+    </ul>
+  ));
 };
