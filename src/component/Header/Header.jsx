@@ -5,7 +5,9 @@ const Header = () => {
     <header className="header">
       <nav className="nav">
         <Link to="/">Home</Link>
+        <Link to="/categories">Categories</Link>
         <Link to="/breeds">breeds</Link>
+        
       </nav>
       
     </header>

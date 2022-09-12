@@ -1,10 +1,6 @@
 import "./main.css";
-import axios from "axios";
-import { Card } from "../Card-info/Card-info";
-import { useEffect, useState } from "react";
-import { Categories } from "../Categories/Categories";
-import { Loading } from "../Loading/Loading";
-const Main = ({ url }) => {
+
+const Main = () => {
   return (
     <main className="main">
       <div className="container">

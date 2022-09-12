@@ -2,9 +2,10 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Loading } from "../Loading/Loading";
 import { Card } from "../Card-info/Card-info";
+import './breeds.css'
 export const Breeds = () => {
   const [loading, setLoading] = useState(true);
-  const [data, setData] = useState(["hi", "by"]);
+  const [data, setData] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -32,6 +33,6 @@ export const Breeds = () => {
   }, []);
 
   return (
-    <div>{loading ? <Loading /> :  <Card data = {data}/>}</div>
+    <div className="card">{loading ? <Loading /> :  <Card data = {data}/>}</div>
   );
 };
