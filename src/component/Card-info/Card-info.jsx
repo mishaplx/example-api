@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./card-info.css"
+import "./card-info.css";
 export const Card = ({ data }) => {
   console.log(data);
   return data.map(item => (

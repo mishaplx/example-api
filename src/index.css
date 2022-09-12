@@ -1,11 +1,17 @@
 body {
   margin: 0;
-
-  background: #c6b6eb;
+  color: black;
+  background-image: linear-gradient(
+    to right,
+    #ee1d78,
+    #ff4e49,
+    #ff8700,
+    #e3bc00,
+    #a8eb12
+  );
+  font-family: "Roboto", sans-serif;
   min-height: 100vh;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -16,4 +22,14 @@ code {
 }
 html {
   height: 100%;
+}
+a {
+  outline: none;
+  text-decoration: none;
+}
+a:visited {
+  color: black;
+}
+a:hover {
+  color: #252525;
 }

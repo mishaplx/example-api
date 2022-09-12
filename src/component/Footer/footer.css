@@ -1,12 +1,10 @@
 .footer {
-  background-color: black;
-  color: aliceblue;
+  background: rgb(255 255 255 / 50%);
   display: flex;
   justify-content: center;
   flex-direction: column;
   flex: 0 0 auto;
   align-items: center;
+  height: 100px;
 }
-.a {
-  color: rgb(75, 137, 190);
-}
+

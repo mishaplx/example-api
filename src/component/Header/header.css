@@ -13,8 +13,7 @@
 .header {
   flex: 0 0 auto;
   height: 100px;
-
-  background: rgb(25, 114, 230);
+  background: rgb(255 255 255 / 50%);
 }
 
 .header > nav > div {
